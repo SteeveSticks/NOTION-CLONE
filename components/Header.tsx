@@ -19,7 +19,8 @@ const Header = () => {
         </h1>
       )}
 
-      {/* Breadcrums */}
+      {/* TODO Breadcrums */}
+
       <div>
         <SignedOut>
           <SignInButton></SignInButton>
