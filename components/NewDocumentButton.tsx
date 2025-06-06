@@ -3,10 +3,11 @@
 import React from "react";
 import { Button } from "./ui/button";
 import { useTransition } from "react";
-import { useRouter } from "next/router";
+import { useRouter } from "next/navigation";
+import { createNewDocument } from "@/actions/actions";
 
 const NewDocumentButton = () => {
-  const [isPeding, startTransition] = useTransition();
+  const [isPending, startTransition] = useTransition();
   const router = useRouter();
 
   const handleCreateNewDocument = () => {
@@ -18,8 +19,8 @@ const NewDocumentButton = () => {
 
   return (
     <div>
-      <Button onClick={handleCreateNewDocument} disabled={!isPeding}>
-        {isPeding ? "Creating" : "New Document"}
+      <Button onClick={handleCreateNewDocument} disabled={isPending}>
+        {isPending ? "Creating" : "New Document"}
       </Button>
     </div>
   );
