@@ -22,7 +22,7 @@ const Document = ({ id }: { id: string }) => {
 
     if (input.trim()) {
       startTransition(async () => {
-        await updateDoc(doc(db, "document", id), {
+        await updateDoc(doc(db, "documents", id), {
           title: input,
         });
       });
@@ -31,10 +31,14 @@ const Document = ({ id }: { id: string }) => {
 
   return (
     <div>
-      <div>
-        <form onSubmit={updateTitle}>
+      <div className="flex max-w-4xl mx-auto justify-between pb-5">
+        <form className="flex flex-1 space-x-2" onSubmit={updateTitle}>
           {/* update title.... */}
-          <Input value={input} onChange={(e) => setInput(e.target.value)} />
+          <Input
+            value={input}
+            onChange={(e) => setInput(e.target.value)}
+            className="!bg-white"
+          />
 
           <Button disabled={isUpdating}>
             {isUpdating ? "Updating..." : "Update"}
