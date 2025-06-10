@@ -20,7 +20,6 @@ const Header = () => {
         </h1>
       )}
 
-      {/* TODO Breadcrums */}
       <Breadcrumbs />
 
       <div>
