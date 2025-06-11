@@ -4,7 +4,7 @@ import { adminDb } from "@/firebase-admin";
 import { auth } from "@clerk/nextjs/server";
 
 export async function createNewDocument() {
-  auth.protect();
+  auth().protect();
 
   const { sessionClaims } = await auth();
 
