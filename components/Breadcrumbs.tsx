@@ -17,8 +17,6 @@ const Breadcrumbs = () => {
 
   const segments = path.split("/").filter(Boolean);
 
-  console.log(segments);
-
   return (
     <Breadcrumb>
       <BreadcrumbList>

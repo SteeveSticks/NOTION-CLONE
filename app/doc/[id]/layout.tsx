@@ -1,13 +1,14 @@
 import { auth } from "@clerk/nextjs/server";
 import React from "react";
-
-const DocLayout = ({
+const DocLayout = async ({
   children,
-  params: { id },
+  params,
 }: {
   children: React.ReactNode;
   params: { id: string };
 }) => {
+  const { id } = params;
+
   auth.protect();
   return <div>{children}</div>;
 };
