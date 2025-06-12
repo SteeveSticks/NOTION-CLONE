@@ -1,6 +1,6 @@
 import React from "react";
 
-const FollowPointer = () => {
+const FollowPointer = ({}) => {
   return <div>FollowPointer</div>;
 };
 
