@@ -9,7 +9,7 @@ const LiveBlocksProvider = ({ children }: { children: React.ReactNode }) => {
   }
 
   return (
-    <LiveblocksProvider authEndpoint={`/auth-endpoint`} throttle={16}>
+    <LiveblocksProvider authEndpoint={"/auth-endpoint"} throttle={16}>
       {children}
     </LiveblocksProvider>
   );
