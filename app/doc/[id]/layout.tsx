@@ -11,7 +11,7 @@ const DocLayout = async (props: {
 
   const { id } = params;
 
-  auth.protect();
+  await auth.protect();
   return <RoomProvider roomId={id}>{children}</RoomProvider>;
 };
 
