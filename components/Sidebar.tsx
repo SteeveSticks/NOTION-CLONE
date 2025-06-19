@@ -101,20 +101,19 @@ const Sidebar = () => {
             ))}
           </>
         )}
-      </div>
 
-      {/* Shared with me */}
-      {groupedData.editor.length > 0 && (
-        <>
-          <h2 className="text-gray-500 font-semibold text-sm">
-            Shared with me
-          </h2>
-          {groupedData.editor.map((doc) => (
-            <SidebarOption key={doc.id} id={doc.id} href={`doc/${doc.id}`} />
-          ))}
-        </>
-      )}
-      {/* TODO list */}
+        {/* Shared with me */}
+        {groupedData.editor.length > 0 && (
+          <>
+            <h2 className="text-gray-500 font-semibold text-sm">
+              Shared with me
+            </h2>
+            {groupedData.editor.map((doc) => (
+              <SidebarOption key={doc.id} id={doc.id} href={`doc/${doc.id}`} />
+            ))}
+          </>
+        )}
+      </div>
     </>
   );
 

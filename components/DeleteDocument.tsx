@@ -40,6 +40,7 @@ const DeleteDocument = () => {
       }
     });
   };
+
   return (
     <div>
       <Dialog open={isOpen} onOpenChange={setIsOpen}>

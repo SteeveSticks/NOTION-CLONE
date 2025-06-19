@@ -69,3 +69,46 @@ export async function deleteDocument(roomId: string) {
     return { success: false };
   }
 }
+
+export async function inviteUserToDocument(roomId: string, email: string) {
+  await auth.protect(); // Ensure the user is authenticated
+
+  console.log("inviteUserToDocument", roomId, email);
+
+  const { sessionClaims } = await auth();
+
+  if (email === sessionClaims?.email) {
+    return { success: false, error: "You cannot invite yourself !" };
+  }
+
+  try {
+    // Check if user is already in the room
+    const existingMembership = await adminDb
+      .collection("users")
+      .doc(email)
+      .collection("rooms")
+      .doc(roomId)
+      .get();
+
+    if (existingMembership.exists) {
+      return { success: false, error: "User is already a member of this room" };
+    }
+
+    await adminDb
+      .collection("users")
+      .doc(email)
+      .collection("rooms")
+      .doc(roomId)
+      .set({
+        userId: email,
+        role: "editor",
+        createdAt: new Date(),
+        roomId,
+      });
+
+    return { success: true };
+  } catch (error) {
+    console.error(error);
+    return { success: false, error: "Failed to invite user." };
+  }
+}
