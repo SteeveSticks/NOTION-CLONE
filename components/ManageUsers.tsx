@@ -1,6 +1,6 @@
 "use client";
 
-import React, { FormEvent, useState, useTransition } from "react";
+import React, { useState, useTransition } from "react";
 import {
   Dialog,
   DialogContent,
@@ -10,7 +10,6 @@ import {
   DialogTrigger,
 } from "@/components/ui/dialog";
 import { Button } from "./ui/button";
-import { inviteUserToDocument } from "@/actions/actions";
 import { toast } from "sonner";
 import { useUser } from "@clerk/nextjs";
 import useOwner from "@/lib/useOwner";
@@ -18,6 +17,7 @@ import { useRoom } from "@liveblocks/react";
 import { useCollection } from "react-firebase-hooks/firestore";
 import { collectionGroup, query, where } from "firebase/firestore";
 import { db } from "@/firebase";
+import { removeUserFromDocument } from "@/actions/actions";
 
 const ManageUsers = () => {
   const { user } = useUser();
