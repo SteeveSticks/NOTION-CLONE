@@ -86,7 +86,7 @@ const ManageUsers = () => {
                         disabled={isPending}
                         size="sm"
                       >
-                        {isPending ? "Removing.." : "X"}
+                        {isPending ? "Removing.." : "Remove Editor"}
                       </Button>
                     )}
                 </div>
