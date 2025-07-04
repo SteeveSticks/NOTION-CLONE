@@ -28,25 +28,39 @@ const ChatToDocument = ({ doc }: { doc: Y.Doc }) => {
     setQuestion(input);
 
     startTransition(async () => {
-      const documentData = doc.get("document-store").toJSON();
+      try {
+        const documentData = doc.get("document-store").toJSON();
 
-      const res = await fetch(
-        `${process.env.NEXT_PUBLIC_BASE_URL}/chatToDocument`,
-        {
-          method: "POST",
-          headers: { "Content-Type": "application/json" },
-          body: JSON.stringify({
-            documentData,
-            question: input,
-          }),
+        const res = await fetch(
+          `${process.env.NEXT_PUBLIC_BASE_URL}/chatToDocument`,
+          {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({
+              documentData,
+              question: input,
+            }),
+          }
+        );
+
+        if (res.ok) {
+          const { message } = await res.json();
+          if (!message) {
+            toast.error("Question asked failed!: No content received");
+            return;
+          }
+          setInput("");
+          setSummary(message);
+          toast.success("Question asked successfully!");
+        } else {
+          const errorData = await res.json().catch(() => ({}));
+          toast.error(
+            `Question asked failed: ${errorData.message || res.statusText}`
+          );
         }
-      );
-
-      if (res.ok) {
-        const { message } = await res.json();
-        setInput("");
-        setSummary(message);
-        toast.success("Question asked successfully!");
+      } catch (error) {
+        console.error("Question error:", error);
+        toast.error("Question asked failed : Network error");
       }
     });
   };
