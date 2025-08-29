@@ -9,6 +9,7 @@ export default function Home() {
       </h1>
 
       {/* Implement a new image feature here */}
+      {/* Also an image with picture showing the action */}
     </main>
   );
 }
