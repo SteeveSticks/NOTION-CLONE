@@ -7,6 +7,8 @@ export default function Home() {
       <h1 className="font-bold text-sm">
         Get started with creating a New Document
       </h1>
+
+      {/* Implement a new image feature here */}
     </main>
   );
 }
