@@ -1,8 +1,7 @@
-/* eslint-disable @typescript-eslint/no-require-imports */
 import { initializeApp, getApps, App, getApp, cert } from "firebase-admin/app";
 import { getFirestore } from "firebase-admin/firestore";
 
-const serviceKey = require("@/service_key.json");
+import { serviceKey } from "@/service_key.json";
 
 let app: App;
 
