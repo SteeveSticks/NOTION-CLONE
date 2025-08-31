@@ -3,9 +3,11 @@
 A collaborative Notion-style document editor with **real-time sync, authentication, and AI-powered features**.  
 Built with **Liveblocks**, **Clerk**, **Firestore**, **Hono**, and **OpenAI**, and deployed on **Vercel**.
 
+![notionclone](https://github.com/user-attachments/assets/6da1dfd0-0043-46b7-aa0d-c388caaff92d)
+
 ---
 
-## ✨ Features
+## Features
 
 - 🔑 **Authentication** – Secure login with [Clerk](https://clerk.com)
 - 🤝 **Real-Time Collaboration** – Multi-user editing with [Liveblocks](https://liveblocks.io)
