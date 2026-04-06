@@ -1,4 +1,4 @@
-# 📝 Notion Clone AI
+# 📝 Notion Clone
 
 A collaborative Notion-style document editor with **real-time sync, authentication, and AI-powered features**.  
 Built with **Liveblocks**, **Clerk**, **Firestore**, **Hono**, and **OpenAI**, and deployed on **Vercel**.
@@ -16,6 +16,16 @@ Built with **Liveblocks**, **Clerk**, **Firestore**, **Hono**, and **OpenAI**, a
 - 🗄 **Cloud Storage** – Store documents in [Firebase Firestore](https://firebase.google.com/docs/firestore)
 - ⚡ **Lightweight Backend** – Powered by [Hono](https://hono.dev) for API routes
 - 🚀 **Fast Deployment** – Hosted on [Vercel](https://vercel.com)
+
+## The application allows users to:
+
+- Create and manage pages
+- Write content using a block-based editor
+- Organize notes in a hierarchical structure
+- Navigate between pages with a smooth UI
+- Persist data using a backend/database system
+
+This project demonstrates the ability to build a scalable full-stack application with modern technologies, focusing on performance, clean UI/UX, and maintainable architecture.
 
 ---
 
@@ -94,13 +104,13 @@ npm wrangler dev
 
 - Frontend -> Vercel
 - Backend -> Cloudflare Workers
-- Configure your frontend to call the backend workers routes for AI functions.
+- Configure your frontend to call the backend workers' routes for AI functions.
 
 ---
 
 🤖 AI Features
 
-- Translate Document: Translate content into limited supported language using OpenAI.
+- Translate Document: Translate content into a limited supported language using OpenAI.
 
 - Chat with Document: Query your documents, and AI provides contextual answers.
 
@@ -110,6 +120,6 @@ npm wrangler dev
 
 ## Author
 
-- Stephen Adebanjo (Steeve) - Fullstack Developer
+- Stephen Adebanjo (Steeve)🧞 - Fullstack Developer
 
 Contributions are welcome! Please open an issue or submit a pull request.
