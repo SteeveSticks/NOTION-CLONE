@@ -8,7 +8,7 @@ import {
 } from "firebase-admin/app";
 import { getFirestore } from "firebase-admin/firestore";
 
-import serviceKey from "@/service_key.json" with { type: "json" };
+import serviceKey from "./service_key.json" with { type: "json" };
 
 const typedServiceKey: ServiceAccount = serviceKey as ServiceAccount;
 
