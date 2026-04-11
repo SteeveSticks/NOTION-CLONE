@@ -1,7 +1,12 @@
+@import url("https://fonts.googleapis.com/css2?family=Playwrite+IE:wght@100..400&display=swap");
 @import "tailwindcss";
 @import "tw-animate-css";
 
 @custom-variant dark (&:is(.dark *));
+
+@theme {
+  --font-playwrite: "Playwrite IE", cursive;
+}
 
 @theme inline {
   --radius-sm: calc(var(--radius) - 4px);
@@ -64,7 +69,9 @@
 
   --color-sidebar-primary: var(--sidebar-primary);
 
-  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-primary-foreground: var(
+    --sidebar-primary-foreground
+  );
 
   --color-sidebar-accent: var(--sidebar-accent);
 
