@@ -11,8 +11,8 @@ export default function Home() {
         </h1>
       </div>
 
-      <div className="flex items-center justify-content">
-        <p className="font-playwrite text-4xl leading-13 tracking-wide py-15 px-10">
+      <div className="grid items-center justify-center">
+        <p className="font-playwrite text-2xl md:text-4xl leading-13 tracking-wide py-8 px-4 md:py-15 md:px-10">
           Design your document with the flexibility to add text,
           images, and more.
           <span className="font-bold text-yellow-700">
@@ -20,11 +20,14 @@ export default function Home() {
             ease.
           </span>
         </p>
+        <div className="bg-black p-2 border md:p-6 rounded-md">
+
         <img
-          className="w-full rounded-md max-w-2xl p-6"
+          className="w-full rounded-md shadow-md"
           src="/image/notiondescri.png"
           alt="Notion Clone"
         />
+        </div>
       </div>
     </main>
   );
