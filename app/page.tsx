@@ -1,4 +1,4 @@
-"use client"
+"use client";
 import { ArrowLeftCircle } from "lucide-react";
 
 export default function Home() {
@@ -21,12 +21,11 @@ export default function Home() {
           </span>
         </p>
         <div className="bg-black p-2 border md:p-6 rounded-md">
-
-        <img
-          className="w-full rounded-md shadow-md"
-          src="/image/notiondescri.png"
-          alt="Notion Clone"
-        />
+          <img
+            className="w-full rounded-md shadow-md"
+            src="/image/notiondescri.png"
+            alt="Notion Clone"
+          />
         </div>
       </div>
     </main>
